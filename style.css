@@ -27,6 +27,8 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  z-index: 1030;
+  height: 70px;
 }
 
 .navbar-brand {
@@ -72,6 +74,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 70px;
 }
 
 .hero::before {
@@ -97,6 +100,8 @@ body {
   object-fit: cover;
   box-shadow: 0 20px 60px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .hero-img:hover {
@@ -300,17 +305,26 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
-  .hero { min-height: 90vh; }
+  .hero { 
+    min-height: 100vh; 
+    padding-top: 70px;
+    text-align: center;
+  }
   .hero-img { width: 150px; height: 150px; }
   .project-card, .skill-card { padding: 1.5rem; }
   .contact-card { padding: 1.5rem; }
   .social-link { width: 50px; height: 50px; font-size: 1.2rem; }
+  .navbar { height: 60px; }
 }
 
 @media (max-width: 576px) {
+  .hero {
+    padding-top: 60px;
+  }
   .hero-img { width: 120px; height: 120px; }
   .btn-hero { padding: 12px 25px; font-size: 0.9rem; }
   .project-card, .skill-card { padding: 1rem; }
+  .navbar { height: 60px; }
 }
 
 /* About Section Styles */
